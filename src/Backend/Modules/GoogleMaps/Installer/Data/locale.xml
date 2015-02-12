@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locale>
+    <Backend>
+        <Core>
+            <item type="label" name="GoogleMaps">
+                <translation language="nl"><![CDATA[Google Maps]]></translation>
+                <translation language="en"><![CDATA[Google Maps]]></translation>
+                <translation language="fr"><![CDATA[Google Maps]]></translation>
+
+            </item>
+        </Core>
+        <GoogleMaps>
+            <item type="message" name="HelpAddress">
+                <translation language="nl"><![CDATA[Geef het adres in zoals je het zou ingeven in Google Maps]]></translation>
+                <translation language="en"><![CDATA[Enter the address as you would enter it in Google Maps]]></translation>
+                <translation language="fr"><![CDATA[Entrez l'adresse du style Google maps]]></translation>
+            </item>
+        </GoogleMaps>
+    </Backend>
+    <Frontend>
+        <Core>
+            <item type="label" name="GoogleMaps">
+                <translation language="nl"><![CDATA[Google Maps]]></translation>
+                <translation language="en"><![CDATA[Google Maps]]></translation>
+                <translation language="fr"><![CDATA[Google Maps]]></translation>
+            </item>
+        </Core>
+    </Frontend>
+</locale>

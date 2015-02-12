@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>GoogleMaps</name>
+	<version>1.0.0</version>
+	<requirements>
+		<minimum_version>2.0.0</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[
+			A simple widget for Google Maps
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[Lander Vanderstraeten]]></name>
+			<url><![CDATA[mailto:lander.vanderstraeten@wijs.be]]></url>
+		</author>
+	</authors>
+	<events>
+		<event application="backend" name="after_saved_settings"><![CDATA[Triggered when the settings are saved.]]></event>
+	</events>
+</module>
