@@ -8,15 +8,14 @@ use Backend\Core\Engine\Form as BackendForm;
 use Backend\Core\Engine\Language as BL;
 
 /**
- * This is the settings-action, it will display a form to fill in an address
+ * This is the settings-action, it will display a form to fill in an address.
  *
  * @author Lander Vanderstraeten <lander.vanderstraeten@wijs.be>
  */
 class Settings extends BackendBaseActionEdit
 {
-
     /**
-     * Execute the action
+     * Execute the action.
      */
     public function execute()
     {
@@ -28,7 +27,7 @@ class Settings extends BackendBaseActionEdit
     }
 
     /**
-     * Loads the settings form
+     * Loads the settings form.
      */
     private function loadForm()
     {
@@ -36,12 +35,12 @@ class Settings extends BackendBaseActionEdit
 
         // add field for address
         $this->frm->addText('address', BackendModel::getModuleSetting(
-            $this->URL->getModule(), 'address_' . BL::getWorkingLanguage()))
+            $this->URL->getModule(), 'address_'.BL::getWorkingLanguage()))
             ->setAttribute('style', 'width:98%;');
     }
 
     /**
-     * Parse the form
+     * Parse the form.
      */
     protected function parse()
     {
@@ -49,7 +48,7 @@ class Settings extends BackendBaseActionEdit
     }
 
     /**
-     * Validates the settings form
+     * Validates the settings form.
      */
     private function validateForm()
     {
@@ -59,14 +58,14 @@ class Settings extends BackendBaseActionEdit
 
             if ($this->frm->isCorrect()) {
                 // set our settings
-                BackendModel::setModuleSetting($this->URL->getModule(), 'address_' .
+                BackendModel::setModuleSetting($this->URL->getModule(), 'address_'.
                     BL::getWorkingLanguage(), $this->frm->getField('address')->getValue());
 
                 // trigger event
                 BackendModel::triggerEvent($this->getModule(), 'after_saved_settings');
 
                 // redirect to the settings page
-                $this->redirect(BackendModel::createURLForAction('Settings') . '&report=saved');
+                $this->redirect(BackendModel::createURLForAction('Settings').'&report=saved');
             }
         }
     }

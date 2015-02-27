@@ -5,23 +5,23 @@ namespace Frontend\Modules\GoogleMaps;
 use Frontend\Core\Engine\Base\Config as FrontendBaseConfig;
 
 /**
- * This is a simple widget for Google Maps
+ * This is a simple widget for Google Maps.
  *
  * @author Lander Vanderstraeten <lander.vanderstraeten@wijs.be>
  */
 class Config extends FrontendBaseConfig
 {
     /**
-     * The default action
+     * The default action.
      *
-     * @var	string
+     * @var string
      */
     protected $defaultAction = 'Index';
 
     /**
-     * The disabled actions
+     * The disabled actions.
      *
-     * @var	array
+     * @var array
      */
     protected $disabledActions = array();
 }

@@ -6,15 +6,14 @@ use Frontend\Core\Engine\Base\Widget as FrontendBaseWidget;
 use Frontend\Core\Engine\Model as FrontendModel;
 
 /**
- * This is a simple widget for Google Maps
+ * This is a simple widget for Google Maps.
  *
  * @author Lander Vanderstraeten <lander.vanderstraeten@wijs.be>
  */
 class GoogleMaps extends FrontendBaseWidget
 {
-
     /**
-     * Execute the extra
+     * Execute the extra.
      */
     public function execute()
     {
@@ -24,19 +23,19 @@ class GoogleMaps extends FrontendBaseWidget
     }
 
     /**
-     * Parse
+     * Parse.
      */
     private function parse()
     {
-        $address = FrontendModel::getModuleSetting('GoogleMaps', 'address_' . FRONTEND_LANGUAGE);
+        $address = FrontendModel::getModuleSetting('GoogleMaps', 'address_'.FRONTEND_LANGUAGE);
 
-        $src = 'https://maps.google.com/maps' .
+        $src = 'https://maps.google.com/maps'.
             // language
-            '?hl=' . FRONTEND_LANGUAGE .
+            '?hl='.FRONTEND_LANGUAGE.
             // address
-            '&amp;q=' . $address .
+            '&amp;q='.$address.
             // UTF-8
-            '&amp;ie=UTF8' .
+            '&amp;ie=UTF8'.
             // Embed
             '&amp;output=embed';
 
