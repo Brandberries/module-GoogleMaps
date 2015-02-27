@@ -1,2 +1,2 @@
 # GoogleMaps
-Work in progress
+A simple ForkCMS widget for Google Maps
